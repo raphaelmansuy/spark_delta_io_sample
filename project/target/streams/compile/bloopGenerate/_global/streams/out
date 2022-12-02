@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0m[spark-sample-build] Classpath dependencies List()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[spark-sample-build] Dependencies from configurations List()[0m
+[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'spark-sample-build' to '/Users/raphaelmansuy/Github/scala-demo/spark-sample/project/.bloop/spark-sample-build.json'[0m
+[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/spark-sample-build.json[0m
