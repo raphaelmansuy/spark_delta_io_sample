@@ -1,4 +1,4 @@
-# Simple example to show how to use the library [delta.io](delta.io) with Spark 3.3.0
+# A simple example to show how to use the library [delta.io](delta.io) with Spark 3.3.0
 
 ## This example shows how to use the library to read a delta table and write a delta table
 

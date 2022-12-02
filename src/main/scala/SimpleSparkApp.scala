@@ -159,8 +159,6 @@ object SimpleSparkApp {
         )
         .execute()
 
-        // Repartition the Delta table with partionKeys
-
     }
 
     // Stop the SparkSession
