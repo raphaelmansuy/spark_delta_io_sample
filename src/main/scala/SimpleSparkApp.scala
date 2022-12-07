@@ -43,8 +43,11 @@ object SimpleSparkApp {
     val updatesColumn = "date_created"
     val createdColumn = "date_created"
 
+
+    val maxUsers = 2000000
+
     // Create a list of users
-    val users = (1 to 100).map(_ => Faker.randomUser()).toList
+    val users = (1 to maxUsers).map(_ => Faker.randomUser()).toList
     val userSarah =
       User(1, "Smith", "Sarah", 30, 100, Timestamp.from(Instant.now()))
 
@@ -81,7 +84,8 @@ object SimpleSparkApp {
     println(f"🚀 Size in MB of the result: $sizeInMB")
 
     // Calculate the ideal number of partitions, the minimum number of partitions is 1
-    val idealNumPartitions = Math.max(1, Math.ceil(sizeInMB / 128).toInt)
+    val idealSizeInMb = 10 // 128MB
+    val idealNumPartitions = Math.max(1, Math.ceil(sizeInMB / idealSizeInMb).toInt)
     println(f"🚀 Ideal number of partitions: $idealNumPartitions")
 
     // Repartition the DataFrame
@@ -121,6 +125,7 @@ object SimpleSparkApp {
       usersDFRepartitioned.write
         .format("delta")
         .option("compression", "snappy")
+        // max size of a file in the table
         .partitionBy(partitionColumns: _*)
         .save(path)
 

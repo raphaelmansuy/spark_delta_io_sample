@@ -13,8 +13,8 @@ object Faker {
     val lastName = scala.util.Random.shuffle(lastNames).head
 		// get a numFriends between 0 and 1000
     val numFriends = scala.util.Random.nextInt(1000)
-		// get a age between 0 and 100
-    val age = scala.util.Random.nextInt(100)
+		// get a age between 20 and 25
+    val age = scala.util.Random.nextInt(5) + 20
     User(id, firstName, lastName, age, numFriends, timestamp)
   }
 
