@@ -1,10 +1,38 @@
-.metals
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# IntelliJ project files
+.idea/
+
+# SBT build files
+target/
+
+# SBT Managed Dependency files
+lib_managed/
+
+# sbt-generated files
+project/
+target/
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Gradle files
+.gradle/
+
+# Scala-specific files
+*.scala_dependencies
+*.scala_classpath
+*.scala_history
+*.scala_migration
+
+.vscode/
 .bloop
-.idea
-.vscode
-./target
-.bsp
-.DS_Store
-users.delta
-users.parquet
-target
+.metals
+users/delta/*
+users/parquet/*
